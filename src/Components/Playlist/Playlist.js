@@ -6,10 +6,16 @@ export class Playlist extends Component {
 	render() {
 		return (
 			<div className='Playlist'>
-				<input type='text' defaultValue='New Playlist' />
+				<input
+					type='text'
+					defaultValue={
+						this.props.playlistName ? this.props.playlistName : 'New Playlist'
+					}
+				/>
 				<TrackList
-					playlistName={this.props.playlistName}
 					tracks={this.props.playlistTracks}
+					removeTrack={this.props.removeTrack}
+					isRemoval={true}
 				/>
 				<button className='Playlist-save'>SAVE TO SPOTIFY</button>
 			</div>
