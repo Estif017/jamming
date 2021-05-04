@@ -13,9 +13,9 @@ export class Track extends Component {
 		return (
 			<div className='Track'>
 				<div className='Track-information'>
-					<h3>{/* Track name */}</h3>
+					<h3>{this.props.track.trackName}</h3>
 					<p>
-						{/* Track artist */} |{/* Track album */}
+						{this.props.track.artist} | {this.props.track.album}
 					</p>
 				</div>
 				{this.renderAction()}
